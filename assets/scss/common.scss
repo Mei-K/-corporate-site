@@ -1,0 +1,14 @@
+.c-main {
+  padding: 24rem 8% 0;
+}
+
+// index.vue内のtitle位置調整
+.s-title {
+  width: 100%;
+  display: flex;
+}
+section:nth-child(even) {
+  .s-title {
+    justify-content: end;
+  }
+}

@@ -1,10 +1,13 @@
 <template>
   <div class="c-header">
-    <div class="logo">Header logo</div>
+    <div class="logo">
+      <nuxt-link to="/"> Header logo</nuxt-link>
+    </div>
     <ul>
-      <li><nuxt-link to=""> Consept</nuxt-link></li>
-      <li><nuxt-link to=""> Service</nuxt-link></li>
-      <li><nuxt-link to=""> Conpany</nuxt-link></li>
+      <li><nuxt-link to=""> Concept</nuxt-link></li>
+      <li><nuxt-link to=""> Bisiness</nuxt-link></li>
+      <li><nuxt-link to=""> Product</nuxt-link></li>
+      <li><nuxt-link to=""> Company</nuxt-link></li>
       <li><nuxt-link to=""> Contact</nuxt-link></li>
     </ul>
   </div>
@@ -19,7 +22,7 @@ export default Vue.extend({})
 // header全体
 .c-header {
   width: 100%;
-  padding: 2% 10%;
+  padding: 1% 10%;
   box-sizing: border-box;
   display: flex;
   align-items: center;
