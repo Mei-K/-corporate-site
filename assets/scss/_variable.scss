@@ -6,11 +6,14 @@ html {
 body {
   width: 100%;
   margin: 0;
+  font-family: 'calibri', sans-serif;
 }
-
+// 色変数
 $white: white;
 $gray: #333333;
+$brown: #80603c;
+$green: #54917f;
 
 .c-content {
-  padding-top: 7.2rem;
+  padding-top: 16rem;
 }

@@ -5,18 +5,23 @@
     </section>
     <section>
       <Concept />
+      {{ scrollY }}
     </section>
     <section>
       <Bisiness />
+      {{ scrollY }}
     </section>
     <section>
       <Product />
+      {{ scrollY }}
     </section>
     <section>
       <Company />
+      {{ scrollY }}
     </section>
     <section>
       <Contact />
+      {{ scrollY }}
     </section>
   </div>
 </template>
@@ -31,6 +36,24 @@ import Company from '~/components/sections/Company.vue'
 import Contact from '~/components/sections/Contact.vue'
 export default Vue.extend({
   components: { Top, Concept, Bisiness, Product, Company, Contact },
+
+  data() {
+    return {
+      // スクロール位置
+      scrollY: 0,
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    /**
+     * スクロール位置を確認する.
+     */
+    handleScroll() {
+      this.scrollY = window.scrollY
+    },
+  },
 })
 </script>
 
