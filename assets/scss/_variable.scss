@@ -8,12 +8,13 @@ body {
   margin: 0;
   font-family: 'calibri', sans-serif;
 }
+
+h4,
+p {
+  margin: 0;
+}
 // 色変数
 $white: white;
 $gray: #333333;
 $brown: #80603c;
-$green: #54917f;
-
-.c-content {
-  padding-top: 16rem;
-}
+$green: #7ebea5; /*#54917f*/

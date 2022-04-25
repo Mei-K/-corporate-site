@@ -16,7 +16,7 @@
       >
         <nuxt-link :to="product.url">
           <img :src="product.imgPath" alt="" />
-          <div class="link-name">{{ product.name }}</div>
+          <h4 class="link-name">{{ product.name }}</h4>
         </nuxt-link>
       </div>
     </transition-group>
@@ -125,10 +125,12 @@ export default Vue.extend({
       -ms-filter: 'alpha(opacity=70)';
     }
 
+    h4 {
+      font-size: 4rem;
+    }
     .link-name {
       width: 100%;
       position: absolute;
-      font-size: 3.2rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
