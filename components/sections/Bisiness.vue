@@ -8,59 +8,32 @@
     <div class="c-content">
       <!-- <transition-group name="list" tag="ul" class="c-img"> -->
       <ul class="content-block">
-        <transition name="list">
-          <li class="content" v-show="isShowContent">
-            <div class="c-img div-0">
-              <img src="~/assets/images/online-store.jpg" alt="" />
+        <transition-group name="list">
+          <li
+            v-for="(content, index) of contentList"
+            :key="index"
+            :class="`content li-${index}`"
+            v-show="isShowContent"
+          >
+            <div class="c-img">
+              <img :src="content.imgPath" :alt="content.altText" />
             </div>
-            <div class="c-text div-1">
-              <h4>Shop</h4>
-              <p>植物の販売事業</p>
+            <div class="c-text">
+              <h4>{{ content.title }}</h4>
+              <p>{{ content.subTitle }}</p>
               <span class="span-text">
-                オンラインショップにて <br />
-                南国の植物や多肉植物、輸入植物など <br />
-                観葉植物の販売とドライフラワーで作った<br />
-                スワッグやブーケなどの雑貨を販売しております
+                {{ content.text }}
               </span>
-              <nuxt-link to="/" class="btn bgleft">
-                <span>ONLINE SHOP</span>
+              <nuxt-link
+                :to="content.url"
+                class="btn bgleft"
+                v-show="content.btnFlag"
+              >
+                <span> {{ content.btnName }} </span>
               </nuxt-link>
             </div>
           </li>
-        </transition>
-        <li class="content">
-          <div class="c-img">
-            <img src="~/assets/images/import.jpg" alt="" />
-          </div>
-          <div class="c-text">
-            <h4>Import</h4>
-            <p>海外輸入事業</p>
-            <span class="span-text">
-              日本では珍しい品種の植物を <br />
-              バイヤーが見定めて海外から輸入し <br />
-              植物を日本の気候に適応してから販売しております
-            </span>
-          </div>
-        </li>
-        <li class="content">
-          <div class="c-img">
-            <img src="~/assets/images/grow-plants.jpg" alt="" />
-          </div>
-          <div class="c-text">
-            <h4>Green Coordination</h4>
-            <p>空間緑化コーディネイト事業</p>
-            <span class="span-text">
-              大手商業施設や某水族館、オフィス内緑化など <br />
-              多数の施設を手がけた経験を経てコーディネーターとして独立。<br />
-              オフィスや商業施設から個人邸の庭園など <br />
-              空間緑化のコーディネイトを行っております。<br />
-              お気軽にご相談ください。
-            </span>
-            <nuxt-link to="/" class="btn bgleft">
-              <span>VIEW MORE</span>
-            </nuxt-link>
-          </div>
-        </li>
+        </transition-group>
       </ul>
       <!-- </transition-group> -->
     </div>
@@ -142,11 +115,10 @@ export default Vue.extend({
       this.scrollY = window.scrollY
       if (this.scrollY >= 1300) {
         this.isShowTitle = true
+      }
+      if (this.scrollY >= 1550) {
         this.isShowContent = true
       }
-      // if (this.scrollY >= 1300) {
-      //   this.isShowContent = true
-      // }
     },
   },
 })
@@ -250,7 +222,7 @@ ul {
   }
 }
 
-/**  transition CSS        */
+/** transition CSS */
 
 @keyframes fade-in {
   0% {
@@ -263,14 +235,19 @@ ul {
   }
 }
 
-.list-enter {
-  width: 100%;
-  opacity: 0;
-}
-.list-enter-active {
-  width: 100%;
-  opacity: 0;
-  animation: fade-in 1s, opacity 1s ease-out;
+@for $i from 0 through 2 {
+  .list-enter {
+    width: 100%;
+    opacity: 0;
+  }
+  .list-enter-active {
+    width: 100%;
+    opacity: 0;
+    animation: fade-in 1s, opacity 1s ease-out;
+    &.li-#{$i} {
+      animation-delay: $i * 1.2s;
+    }
+  }
 }
 
 /**  MORE ボタンCSS */
