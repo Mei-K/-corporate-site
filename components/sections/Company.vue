@@ -6,18 +6,21 @@
       </transition>
     </div>
 
-    <transition name="link">
-      <div class="c-content c-company" v-show="isShowContent">
-        <nuxt-link to="/">
+    <div class="c-content c-company">
+      <transition name="link">
+        <nuxt-link to="/" v-show="isShowContent">
           <img src="~/assets/images/monstera.jpg" alt="" />
           <div class="img-cover">
-            <h4>Smple Company</h4>
+            <h4>Sample Company</h4>
             <p>- Since 2021 -</p>
+            <span>CEO:</span>
           </div>
         </nuxt-link>
-        <div class="square"></div>
-      </div>
-    </transition>
+      </transition>
+      <transition name="background">
+        <div class="square" v-show="isShowBackGround"></div>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -35,6 +38,8 @@ export default Vue.extend({
       isShowTitle: false,
       // link-img fadein表示
       isShowContent: false,
+      // 背景 fadein表示
+      isShowBackGround: false,
     }
   },
   mounted() {
@@ -50,7 +55,10 @@ export default Vue.extend({
       if (this.scrollY >= 4100) {
         this.isShowTitle = true
       }
-      if (this.scrollY >= 4400) {
+      if (this.scrollY >= 4350) {
+        this.isShowBackGround = true
+      }
+      if (this.scrollY >= 4450) {
         this.isShowContent = true
       }
     },
@@ -103,7 +111,6 @@ export default Vue.extend({
     filter: alpha(opacity=70);
     -ms-filter: 'alpha(opacity=70)';
   }
-  // a:hover .c-company
 
   .square {
     position: absolute;
@@ -118,9 +125,16 @@ export default Vue.extend({
 
 .link-enter {
   opacity: 0;
-  transform: translateY(55px);
+  transform: translateY(60px);
 }
 .link-enter-active {
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.background-enter {
+  opacity: 0;
+  transform: translateY(55px);
+}
+.background-enter-active {
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 </style>

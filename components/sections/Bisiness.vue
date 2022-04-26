@@ -6,7 +6,6 @@
       </transition>
     </div>
     <div class="c-content">
-      <!-- <transition-group name="list" tag="ul" class="c-img"> -->
       <ul class="content-block">
         <transition-group name="list">
           <li
@@ -20,7 +19,7 @@
             </div>
             <div class="c-text">
               <h4>{{ content.title }}</h4>
-              <p>{{ content.subTitle }}</p>
+              <h5>{{ content.subTitle }}</h5>
               <span class="span-text">
                 {{ content.text }}
               </span>
@@ -35,7 +34,6 @@
           </li>
         </transition-group>
       </ul>
-      <!-- </transition-group> -->
     </div>
   </div>
 </template>
@@ -96,12 +94,8 @@ export default Vue.extend({
       scrollY: 0,
       // タイトル fadein表示
       isShowTitle: false,
-
+      // コンテンツ fadein
       isShowContent: false,
-      // コンテンツテキスト fadein表示
-      // isShowText: false,
-      // コンテンツimg fadein表示
-      // isShowImg: false,
     }
   },
   mounted() {
@@ -147,8 +141,11 @@ ul {
         font-size: 5.6rem;
         line-height: 1;
       }
-      p {
+      h5 {
         font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1;
+        margin-top: 0.8rem;
       }
       .span-text {
         display: inline-block;
@@ -260,7 +257,7 @@ ul {
   display: inline-block;
   border: 1px solid $light-green; /* ボーダーの色と太さ */
   padding: 1.2rem 6rem;
-  margin: 10% 0 0 34%;
+  margin: 10% 0 0 32%;
   text-align: center;
   outline: none;
   /*アニメーションの指定*/

@@ -5,15 +5,12 @@
     </section>
     <section>
       <Concept />
-      {{ scrollY }}
     </section>
     <section>
       <Bisiness />
-      {{ scrollY }}
     </section>
     <section>
       <Product />
-      {{ scrollY }}
     </section>
     <section>
       <Company />
