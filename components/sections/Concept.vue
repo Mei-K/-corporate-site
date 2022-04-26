@@ -102,7 +102,7 @@ export default Vue.extend({
       /*ボタンの形状*/
       text-decoration: none;
       display: inline-block;
-      border: 1px solid $green; /* ボーダーの色と太さ */
+      border: 1px solid $light-green; /* ボーダーの色と太さ */
       padding: 10px 30px;
       text-align: center;
       outline: none;
@@ -113,7 +113,7 @@ export default Vue.extend({
     .btn span {
       position: relative;
       z-index: 3; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
-      color: $gray;
+      color: $green;
     }
     .btn:hover span {
       color: $white;
@@ -127,7 +127,7 @@ export default Vue.extend({
       left: 0;
       z-index: 2;
       /*色や形状*/
-      background: $green; /*背景色*/
+      background: $light-green; /*背景色*/
       width: 100%;
       height: 100%;
       /*アニメーション*/

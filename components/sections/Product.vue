@@ -55,9 +55,7 @@ export default Vue.extend({
           imgPath: require('~/assets/images/palm.jpg'),
           url: '/',
         },
-      ],
-      // hoverされているかどうか
-      hoverFlag: false,
+      ] as Array<Product>,
 
       // スクロール位置
       scrollY: 0,
@@ -79,10 +77,10 @@ export default Vue.extend({
     handleScroll() {
       this.scrollY = window.scrollY
 
-      if (this.scrollY >= 2100) {
+      if (this.scrollY >= 3200) {
         this.isShowTitle = true
       }
-      if (this.scrollY >= 2200) {
+      if (this.scrollY >= 3400) {
         this.isShowContent = true
       }
     },
@@ -98,14 +96,14 @@ export default Vue.extend({
   list-style: none;
 
   .link-img {
-    width: 27%;
+    width: 32%;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
 
     img {
       width: 100%;
-      height: 24rem;
+      height: 30rem;
       transition-duration: 0.5s;
     }
     img:hover {
