@@ -47,10 +47,10 @@ export default Vue.extend({
      */
     handleScroll() {
       this.scrollY = window.scrollY
-      if (this.scrollY >= 2800) {
+      if (this.scrollY >= 4100) {
         this.isShowTitle = true
       }
-      if (this.scrollY >= 3200) {
+      if (this.scrollY >= 4400) {
         this.isShowContent = true
       }
     },
@@ -109,7 +109,7 @@ export default Vue.extend({
     position: absolute;
     width: 28rem;
     height: 28rem;
-    background-color: $green;
+    background-color: $light-green;
     top: -20%;
     right: 80%;
     z-index: -1;
