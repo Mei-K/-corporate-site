@@ -11,7 +11,7 @@
         <nuxt-link to="/" v-show="isShowContent">
           <img src="~/assets/images/monstera.jpg" alt="" />
           <div class="img-cover">
-            <h4>Sample Company</h4>
+            <h4>anoano.Inc</h4>
             <p>- Since 2021 -</p>
             <!-- <span>CEO:</span> -->
           </div>
