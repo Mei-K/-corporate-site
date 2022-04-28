@@ -9,8 +9,6 @@ export default Vue.extend({})
 
 <style lang="scss" scoped>
 .footer {
-  // background-color: #856859;
-  // color: $white;
   color: #856859;
   text-align: center;
   padding: 1rem 0;

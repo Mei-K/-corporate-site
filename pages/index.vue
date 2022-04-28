@@ -4,18 +4,23 @@
       <Top />
     </section>
     <section>
+      {{ scrollY }}
       <Concept />
     </section>
     <section>
+      {{ scrollY }}
       <Bisiness />
     </section>
     <section>
+      {{ scrollY }}
       <Product />
     </section>
     <section>
+      {{ scrollY }}
       <Company />
     </section>
     <section>
+      {{ scrollY }}
       <Contact />
     </section>
   </div>

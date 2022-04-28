@@ -3,6 +3,7 @@
     <transition>
       <Header v-show="isShowHeader" />
     </transition>
+    <SpHeader class="sp-header" />
     <Nuxt />
     <Footer />
   </div>
@@ -11,10 +12,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import Header from '~/components/globals/Header.vue'
+import SpHeader from '~/components/globals/SpHeader.vue'
 import Footer from '~/components/globals/Footer.vue'
 export default Vue.extend({
   components: {
     Header,
+    SpHeader,
     Footer,
   },
 
@@ -60,6 +63,17 @@ main {
   position: fixed;
   z-index: 100;
   transition: 1s;
+}
+
+@include tab {
+  .sp-header {
+    display: none;
+  }
+}
+@include pc {
+  .sp-header {
+    display: none;
+  }
 }
 /** transition CSS */
 // コンテンツimg

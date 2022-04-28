@@ -64,10 +64,10 @@ export default Vue.extend({
 
       //画面幅が428px以下 (スマホサイズの時)
       if (window.innerWidth <= 428) {
-        if (this.scrollY >= 3000) {
+        if (this.scrollY >= 2500) {
           this.isShowTitle = true
         }
-        if (this.scrollY >= 3100) {
+        if (this.scrollY >= 2520) {
           this.isShowImg = true
         }
       } else if (window.innerWidth > 428) {

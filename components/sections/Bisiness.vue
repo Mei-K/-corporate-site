@@ -107,10 +107,10 @@ export default Vue.extend({
       this.scrollY = window.scrollY
       //画面幅が428px以下 (スマホサイズの時)
       if (window.innerWidth <= 428) {
-        if (this.scrollY >= 1000) {
+        if (this.scrollY >= 380) {
           this.isShowTitle = true
         }
-        if (this.scrollY >= 1100) {
+        if (this.scrollY >= 400) {
           this.isShowContent = true
         }
       } else if (window.innerWidth > 428) {

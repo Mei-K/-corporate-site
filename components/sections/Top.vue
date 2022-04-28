@@ -76,12 +76,12 @@ export default Vue.extend({
   .swiper-container {
     width: 100%;
   }
-  img {
-    height: 100%;
-  }
   .c-header {
     width: 100%;
-    height: 100vh;
+    height: 55vh;
+    img {
+      height: 55vh;
+    }
 
     .top-title {
       font-size: 4.2rem;

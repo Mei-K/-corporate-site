@@ -55,13 +55,13 @@ export default Vue.extend({
 
       //画面幅が428px以下 (スマホサイズの時)
       if (window.innerWidth <= 428) {
-        if (this.scrollY >= 2600) {
+        if (this.scrollY >= 2150) {
           this.isShowTitle = true
         }
-        if (this.scrollY >= 2700) {
+        if (this.scrollY >= 2200) {
           this.isShowBackGround = true
         }
-        if (this.scrollY >= 2750) {
+        if (this.scrollY >= 2220) {
           this.isShowContent = true
         }
         // 画面幅429px以上の時
