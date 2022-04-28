@@ -4,7 +4,6 @@
       <transition name="title">
         <Title name="Concept" subTitle="コンセプト" v-show="isShowTitle" />
       </transition>
-      <span>{{ scrollY }}</span>
     </div>
 
     <div class="consept-content c-content">

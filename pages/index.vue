@@ -3,18 +3,20 @@
     <section>
       <Top />
     </section>
-    <section><Concept /></section>
-    <section><Bisiness /></section>
+    <section>
+      <Concept />
+    </section>
+    <section>
+      <Bisiness />
+    </section>
     <section>
       <Product />
     </section>
     <section>
       <Company />
-      {{ scrollY }}
     </section>
     <section>
       <Contact />
-      {{ scrollY }}
     </section>
   </div>
 </template>
