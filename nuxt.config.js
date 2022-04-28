@@ -1,3 +1,6 @@
+const Sass = require('sass')
+const Fiber = require('fibers')
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -62,5 +65,18 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber,
+        },
+      },
+    },
+    /*
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {},
+  },
 }
