@@ -1,7 +1,7 @@
 <template>
   <div class="c-header">
-    <!-- <div class="top-title"><h1>Sample Company</h1></div> -->
-    <div class="top-title"><h1>anoano plants</h1></div>
+    <div class="top-title"><h1>Sample Company</h1></div>
+    <!-- <div class="top-title"><h1>anoano plants</h1></div> -->
     <swiper :options="swiperOption" class="top-img">
       <swiper-slide v-for="path of topImages" :key="path">
         <img :src="path" />
@@ -75,6 +75,9 @@ export default Vue.extend({
 @include sp {
   .swiper-container {
     width: 100%;
+  }
+  img {
+    height: 100%;
   }
   .c-header {
     width: 100%;

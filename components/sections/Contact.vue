@@ -112,7 +112,6 @@ export default Vue.extend({
 }
 
 /** スマホ画面css */
-
 @include sp {
   .c-main {
     padding: 4rem 4% 10rem;
