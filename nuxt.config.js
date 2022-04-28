@@ -1,5 +1,5 @@
 const Sass = require('sass')
-const Fiber = require('fibers')
+// const Fiber = require('fibers')
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -69,9 +69,9 @@ export default {
     loaders: {
       scss: {
         implementation: Sass,
-        sassOptions: {
-          fiber: Fiber,
-        },
+        // sassOptions: {
+        //   fiber: Fiber,
+        // },
       },
     },
     /*
