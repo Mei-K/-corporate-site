@@ -20,9 +20,7 @@
             <div class="c-text">
               <h4>{{ content.title }}</h4>
               <h5>{{ content.subTitle }}</h5>
-              <span class="span-text">
-                {{ content.text }}
-              </span>
+              <span class="span-text" v-html="content.text"> </span>
               <nuxt-link
                 :to="content.url"
                 class="btn bgleft"
@@ -107,11 +105,21 @@ export default Vue.extend({
      */
     handleScroll() {
       this.scrollY = window.scrollY
-      if (this.scrollY >= 1300) {
-        this.isShowTitle = true
-      }
-      if (this.scrollY >= 1550) {
-        this.isShowContent = true
+      //画面幅が428px以下 (スマホサイズの時)
+      if (window.innerWidth <= 428) {
+        if (this.scrollY >= 1000) {
+          this.isShowTitle = true
+        }
+        if (this.scrollY >= 1100) {
+          this.isShowContent = true
+        }
+      } else if (window.innerWidth > 428) {
+        if (this.scrollY >= 1300) {
+          this.isShowTitle = true
+        }
+        if (this.scrollY >= 1550) {
+          this.isShowContent = true
+        }
       }
     },
   },
@@ -294,5 +302,61 @@ ul {
 .bgleft:hover:before {
   transform-origin: left top;
   transform: scale(1, 1);
+}
+
+/** スマホcss */
+
+@include sp {
+  ul {
+    margin: 8rem 0 0 0;
+    li:nth-child(-n + 3) {
+      display: block;
+      position: relative;
+      margin: 0;
+      .c-text {
+        position: absolute;
+        top: 15%;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+
+        h4 {
+          font-size: 3.8rem;
+          font-weight: 600;
+        }
+
+        .span-text {
+          font-size: 1.5rem;
+          padding: 0;
+          text-align: center;
+        }
+
+        .btn {
+          margin: 3rem auto;
+          border: 1px solid black;
+          span {
+            color: black;
+            font-weight: 900;
+          }
+        }
+      }
+      .c-img {
+        width: 100%;
+        height: 36rem;
+        img {
+          width: 100%;
+          height: 36rem;
+          opacity: 0.4;
+          top: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        .span-text {
+          padding: 2rem 0;
+        }
+      }
+    }
+  }
 }
 </style>

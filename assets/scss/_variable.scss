@@ -1,21 +1,20 @@
-// 標準フォントサイズを10pxに
-html {
-  font-size: 62.5%;
-}
-
-body {
-  width: 100%;
-  margin: 0;
-  font-family: 'calibri', sans-serif;
-}
-
-h4,
-p {
-  margin: 0;
-}
 // 色変数
 $white: white;
 $gray: #333333;
 $brown: #80603c;
 $green: #549173; /*#54917f*/
 $light-green: #7ebea5; /*#54917f*/
+
+$pc: 769px; // PC
+$sp: 428px; // スマホ
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}

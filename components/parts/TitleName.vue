@@ -39,4 +39,21 @@ export default Vue.extend({
     font-size: 1.6rem;
   }
 }
+
+/** スマホ画面CSS */
+
+@include sp {
+  .c-title {
+    margin: 0;
+
+    h2 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
 </style>

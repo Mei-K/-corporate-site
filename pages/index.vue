@@ -3,12 +3,8 @@
     <section>
       <Top />
     </section>
-    <section>
-      <Concept />
-    </section>
-    <section>
-      <Bisiness />
-    </section>
+    <section><Concept /></section>
+    <section><Bisiness /></section>
     <section>
       <Product />
     </section>

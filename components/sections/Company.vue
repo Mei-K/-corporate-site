@@ -13,7 +13,7 @@
           <div class="img-cover">
             <h4>Sample Company</h4>
             <p>- Since 2021 -</p>
-            <span>CEO:</span>
+            <!-- <span>CEO:</span> -->
           </div>
         </nuxt-link>
       </transition>
@@ -52,14 +52,29 @@ export default Vue.extend({
      */
     handleScroll() {
       this.scrollY = window.scrollY
-      if (this.scrollY >= 4100) {
-        this.isShowTitle = true
-      }
-      if (this.scrollY >= 4350) {
-        this.isShowBackGround = true
-      }
-      if (this.scrollY >= 4450) {
-        this.isShowContent = true
+
+      //画面幅が428px以下 (スマホサイズの時)
+      if (window.innerWidth <= 428) {
+        if (this.scrollY >= 2600) {
+          this.isShowTitle = true
+        }
+        if (this.scrollY >= 2700) {
+          this.isShowBackGround = true
+        }
+        if (this.scrollY >= 2750) {
+          this.isShowContent = true
+        }
+        // 画面幅429px以上の時
+      } else if (window.innerWidth > 428) {
+        if (this.scrollY >= 4100) {
+          this.isShowTitle = true
+        }
+        if (this.scrollY >= 4350) {
+          this.isShowBackGround = true
+        }
+        if (this.scrollY >= 4450) {
+          this.isShowContent = true
+        }
       }
     },
   },
@@ -120,6 +135,41 @@ export default Vue.extend({
     top: -20%;
     right: 80%;
     z-index: -1;
+  }
+}
+
+/** スマホ画面 CSS */
+
+@include sp {
+  .c-company {
+    width: 90%;
+    height: 20rem;
+    margin: 4rem 0 0 auto;
+    // margin-right: auto;
+
+    a {
+      img {
+        height: 100%;
+      }
+      .img-cover {
+        padding: 6rem 0;
+        top: -655%;
+
+        h4 {
+          font-size: 3.2rem;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .square {
+      width: 16rem;
+      height: 16rem;
+      top: -10%;
+      right: 55%;
+    }
   }
 }
 

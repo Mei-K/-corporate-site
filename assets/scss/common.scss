@@ -1,6 +1,31 @@
+// 標準フォントサイズを10pxに
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: 'calibri', sans-serif;
+}
+
+h4,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 .c-main {
   padding: 18rem 8% 0;
   min-height: 60rem;
+
+  @include sp {
+    padding: 10rem 4% 0;
+    min-height: 40rem;
+  }
 }
 
 // index.vue内のtitle位置調整
@@ -11,15 +36,22 @@
 section:nth-child(even) {
   .s-title {
     justify-content: end;
+
+    @include sp {
+      justify-content: start;
+    }
+  }
+}
+// titleの下のコンテナ
+.c-content {
+  margin-top: 14rem;
+
+  @include sp {
+    margin-top: 3.2rem;
   }
 }
 
-.c-content {
-  margin-top: 16rem;
-}
-
 /*transition CSS*/
-
 // タイトル fadein / fadeout CSS
 .title-enter {
   opacity: 0;
@@ -28,3 +60,5 @@ section:nth-child(even) {
 .title-enter-active {
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+/** */

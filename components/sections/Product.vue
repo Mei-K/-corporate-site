@@ -77,11 +77,21 @@ export default Vue.extend({
     handleScroll() {
       this.scrollY = window.scrollY
 
-      if (this.scrollY >= 3200) {
-        this.isShowTitle = true
-      }
-      if (this.scrollY >= 3400) {
-        this.isShowContent = true
+      //画面幅が428px以下 (スマホサイズの時)
+      if (window.innerWidth <= 428) {
+        if (this.scrollY >= 2050) {
+          this.isShowTitle = true
+        }
+        if (this.scrollY >= 2150) {
+          this.isShowContent = true
+        }
+      } else if (window.innerWidth > 428) {
+        if (this.scrollY >= 3200) {
+          this.isShowTitle = true
+        }
+        if (this.scrollY >= 3400) {
+          this.isShowContent = true
+        }
       }
     },
   },
@@ -134,6 +144,22 @@ export default Vue.extend({
       transform: translate(-50%, -50%);
       text-align: center;
       line-height: 0;
+    }
+  }
+}
+
+@include sp {
+  .c-content {
+    flex-direction: column;
+
+    .link-img {
+      width: 100%;
+      height: 10rem;
+      margin: 0 0 1.8rem 0;
+
+      img {
+        height: auto;
+      }
     }
   }
 }

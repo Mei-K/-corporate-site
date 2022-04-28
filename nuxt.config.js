@@ -20,6 +20,12 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       // Adobe font
       { rel: 'stylesheet', href: 'https://use.typekit.net/mrp6phg.css' },
+      // fontAwesome icon CDN
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.15.4/css/all.css',
+        // href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
+      },
     ],
     // <link rel="stylesheet" href="https://use.typekit.net/mrp6phg.css"  >
   },

@@ -1,5 +1,5 @@
 <template>
-  <div>Footer</div>
+  <div class="footer">&copy;anoano.Inc | 2021</div>
 </template>
 
 <script lang="ts">
@@ -7,4 +7,13 @@ import Vue from 'vue'
 export default Vue.extend({})
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.footer {
+  // background-color: #856859;
+  // color: $white;
+  color: #856859;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+</style>

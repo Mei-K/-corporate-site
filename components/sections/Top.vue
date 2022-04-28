@@ -3,8 +3,8 @@
     <div class="top-title"><h1>Sample Company</h1></div>
     <!-- <div class="top-title"><h1>anoano plants</h1></div> -->
     <swiper :options="swiperOption" class="top-img">
-      <swiper-slide v-for="url of topImages" :key="url">
-        <img :src="url" />
+      <swiper-slide v-for="path of topImages" :key="path">
+        <img :src="path" />
       </swiper-slide>
 
       <div
@@ -46,6 +46,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+// PC画面
 .c-header {
   position: relative;
   width: 100%;
@@ -67,6 +68,22 @@ export default Vue.extend({
   img {
     width: 100%;
     height: 100vh;
+  }
+}
+
+// スマホ画面
+@include sp {
+  .swiper-container {
+    width: 100%;
+  }
+  .c-header {
+    width: 100%;
+    height: 100vh;
+
+    .top-title {
+      font-size: 4.2rem;
+      line-height: 1;
+    }
   }
 }
 </style>
