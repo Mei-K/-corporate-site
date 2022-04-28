@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="logo">
-      <nuxt-link to="/"> Header logo</nuxt-link>
+      <nuxt-link to="/"> anoano plants</nuxt-link>
     </div>
     <ul>
       <li><nuxt-link to=""> Concept</nuxt-link></li>
@@ -36,6 +36,11 @@ export default Vue.extend({})
   // 会社ロゴ 右寄せ
   .logo {
     width: 30%;
+    a {
+      font-size: 4rem;
+      font-weight: 700;
+      color: $white;
+    }
   }
   // リンクメニュー
   ul {
