@@ -4,7 +4,7 @@ const Sass = require('sass')
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'sample.Inc |  観葉植物・ドライフラワー・雑貨販売店',
+    title: 'anoano.Inc |  観葉植物・ドライフラワー・雑貨販売店',
     htmlAttrs: {
       lang: 'ja',
     },
@@ -12,7 +12,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        name: 'sample plants',
+        name: 'anoano plants',
         content:
           '観葉植物・ドライフラワー・雑貨を中心に販売を行なっている会社です。',
       },
